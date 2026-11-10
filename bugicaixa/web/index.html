@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BugiCaixa</title>
+<link rel="icon" type="image/svg+xml" href="/web/icone.svg">
+<link rel="stylesheet" href="/web/app.css">
+</head>
+<body>
+<header class="topo">
+  <div class="marca"><img src="/web/icone.svg" alt="" width="22" height="22">BugiCaixa <span id="versao"></span></div>
+  <div class="local">Tudo roda neste computador. Nenhum arquivo é enviado para a internet.</div>
+  <button type="button" id="encerrar" class="discreto">Encerrar</button>
+</header>
+
+<div class="corpo">
+  <nav id="menu" aria-label="Ferramentas"></nav>
+
+  <main>
+    <section class="cartao">
+      <h1 id="nome-ferramenta"></h1>
+      <p id="descricao-ferramenta" class="suave"></p>
+      <form id="formulario" novalidate></form>
+      <div class="acoes">
+        <button type="button" id="executar" class="principal">Gerar relatório</button>
+        <span id="situacao" role="status"></span>
+      </div>
+    </section>
+
+    <section class="cartao" id="saida">
+      <div class="saida-topo">
+        <h2>Relatório</h2>
+        <span id="resumo" class="suave"></span>
+        <span class="botoes" id="botoes-relatorio" hidden>
+          <a id="salvar" class="botao">Salvar HTML</a>
+          <button type="button" id="imprimir">Imprimir / PDF</button>
+          <a id="nova-aba" class="botao" target="_blank" rel="noopener">Abrir em nova aba</a>
+        </span>
+      </div>
+      <p id="vazio" class="suave">O relatório aparece aqui depois que você selecionar os arquivos e clicar em “Gerar relatório”.</p>
+      <iframe id="quadro" title="Relatório" hidden></iframe>
+    </section>
+  </main>
+</div>
+
+<script src="/web/app.js"></script>
+</body>
+</html>

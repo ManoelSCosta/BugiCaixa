@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bugicaixa"
+description = "Caixa de bugigangas: ferramentas de apoio que rodam localmente, com tela no navegador."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Manoel Costa" }]
+dependencies = []
+dynamic = ["version"]
+keywords = ["logs", "ferramentas", "suporte", "relatorio"]
+
+[project.scripts]
+bugicaixa = "bugicaixa.__main__:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "bugicaixa.VERSAO" }
+
+[tool.setuptools.packages.find]
+include = ["bugicaixa*"]
+
+[tool.setuptools.package-data]
+bugicaixa = ["web/*"]

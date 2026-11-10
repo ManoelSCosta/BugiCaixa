@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Nunca versionar logs reais nem relatórios gerados a partir deles
+*.log
+*.gz
+relatorio-*.html
+/logs/
+/amostras-reais/
