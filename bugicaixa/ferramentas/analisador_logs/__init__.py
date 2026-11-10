@@ -1,4 +1,4 @@
-"""Ferramenta: Analisador de Logs."""
+"""Ferramenta: BugiLog, o analisador de logs."""
 
 import argparse
 import glob
@@ -11,9 +11,9 @@ from . import historico
 from .analise import Analise
 from .relatorio import fmt_num, gerar_html
 
-ID = "analisador-logs"
-NOME = "Analisador de Logs"
-DESCRICAO = ("Lê arquivos de log, agrupa erros e avisos equivalentes e monta um "
+ID = "bugilog"
+NOME = "BugiLog"
+DESCRICAO = ("Analisador de logs: lê os arquivos, agrupa erros e avisos equivalentes e monta um "
              "relatório com as causas mais frequentes.")
 ORDEM = 10
 

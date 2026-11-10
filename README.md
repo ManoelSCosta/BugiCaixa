@@ -6,7 +6,7 @@ nenhum arquivo sai da máquina.
 
 Ferramentas disponíveis:
 
-- **Analisador de Logs** — agrupa erros e avisos equivalentes de arquivos de
+- **BugiLog** (analisador de logs) — agrupa erros e avisos equivalentes de arquivos de
   log e monta um relatório com as causas mais frequentes.
 
 ## Abrir
@@ -26,7 +26,7 @@ Opcional:
 - `python3 -m bugicaixa --criar-atalho` — ícone no menu de aplicativos (Linux).
 - `pipx install .` (ou `pip install .`) — instala o comando `bugicaixa`.
 
-## Analisador de Logs
+## BugiLog — analisador de logs
 
 1. Clique na caixa **Arquivos de log** (ou arraste os arquivos para ela).
 2. Opcional: informe o **Sistema**. Usando sempre o mesmo nome, o relatório
@@ -49,8 +49,11 @@ JSON por linha (Logstash/ECS). Arquivos `.gz` são lidos direto.
 Pela linha de comando (aceita pastas):
 
 ```bash
-python3 -m bugicaixa analisador-logs ./logs -o relatorio.html --sistema "Minha API"
+python3 -m bugicaixa bugilog ./logs -o relatorio.html --sistema "Minha API"
 ```
+
+O BugiLog também existe como projeto próprio, que roda inteiro no navegador e
+é distribuído como contêiner: <https://github.com/ManoelSCosta/BugiLog>.
 
 O histórico de comparação fica em `~/.local/share/bugicaixa`
 (Windows: `%APPDATA%\bugicaixa`; macOS: `~/Library/Application Support/bugicaixa`).
